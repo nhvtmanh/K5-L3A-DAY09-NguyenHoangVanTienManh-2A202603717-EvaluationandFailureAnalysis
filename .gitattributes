@@ -1,0 +1,2 @@
+# Keep generated eval inputs portable between Windows and Linux CI.
+src/data/eval/eval_set_v*.jsonl text eol=lf

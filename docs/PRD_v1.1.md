@@ -12,7 +12,7 @@ V1: 14 item × 5 seed; v2: 28 item × 5 seed; MockLLM, không có người dùng
 
 ## Tiêu chí chạy đúng
 
-Baseline `E-swarm-20261117-1921`, eval SHA `1921c6d2c1c7`.
+Baseline `E-swarm-20261118-3453`, eval SHA `3453548c0106`.
 
 | Metric | Ngưỡng | Chặn release | Baseline |
 |---|---|---|---:|
@@ -59,7 +59,7 @@ Chi tiết: [taxonomy](failure_taxonomy.md), [audit](judge_audit.md), [trace cas
 ## Bằng chứng và giới hạn
 
 Xem [eval card](eval_card.md): kết quả, CI, run ID, snapshot code SHA, A/A, scorecard và trap.
-Reports do CLI sinh; source revision trước commit: `d1b9471540727d693c9eb392667b9f0d8a998bf5`.
+Reports do CLI sinh; source revision trước commit: `73a7f14111a3c98cf297b88dc4d2d19c9fb366c6`.
 Thiếu dữ liệu người dùng thật, LLM thật, held-out judge, key anchor và hidden grader.
 CI rộng với 14 item; lỗi hiếm không bảo đảm bị bắt với 5 seed.
 
