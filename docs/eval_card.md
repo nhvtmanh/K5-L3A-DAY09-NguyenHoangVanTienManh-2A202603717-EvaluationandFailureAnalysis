@@ -4,13 +4,15 @@ Tài liệu sinh bằng `python -m scripts.lab9_document` từ report CLI, khôn
 
 ## Phiên bản và nguồn
 
-- Git HEAD lúc sinh: `d1b9471540727d693c9eb392667b9f0d8a998bf5`; code/grader đang là working tree chưa commit.
-- SHA-256 snapshot code/config: `b47852d19f1509f5e8d9d6ee9c39b4bf46e761306f57d1d14f8ee38a16639225`. Thuật toán và danh sách file nằm trong script sinh tài liệu.
-- V1: `E-swarm-20261117-1921`, eval set SHA `1921c6d2c1c7`, metric spec 1.1.
-- Fixed: `E-fixed-20261117-1921`; regression: `E-seeded_regression-20261117-1921`.
-- V2: `E-swarm-20261117-ec7e`, SHA `ec7e0aacf17d`, spec 2.0.
+- Git HEAD lúc sinh: `73a7f14111a3c98cf297b88dc4d2d19c9fb366c6`; code/grader đang là working tree chưa commit.
+- SHA-256 snapshot code/config: `94258b4c165f25144517f4a79638aa7b05130a7e122e35c643b54ae090cb3667`. Thuật toán và danh sách file nằm trong script sinh tài liệu.
+- V1: `E-swarm-20261118-3453`, eval set SHA `3453548c0106`, metric spec 1.1.
+- Fixed: `E-fixed-20261118-3453`; regression: `E-seeded_regression-20261118-3453`.
+- V2: `E-swarm-20261118-e36a`, SHA `e36a8502c099`, spec 2.0.
 - Labels v1 SHA-256: `8ec43bda73843193d35b515ab41cb612543b4a4f5c6dab31f1ecc62154eb8a87`.
 - V1: 14 item × 5 seed; v2: 28 item × 5 seed. Seeds 11,22,33,44,55. Nhãn tách riêng, nguồn lab8_public và instructor_adversarial.
+- SHA eval set chuẩn hóa CRLF thành LF để Windows/Linux cùng nhận diện dữ liệu;
+  nội dung, khoảng trắng và thứ tự item vẫn được hash. Builder ghi LF; gate vẫn chặn SHA khác nhau.
 - Baseline được sinh từ swarm nguyên bản; Lab 8 không sửa. Việc commit lên nhánh được bảo vệ và xác nhận GitHub CI còn chờ nộp PR.
 
 ## Kết quả v1
@@ -110,9 +112,9 @@ exit 0 — the gate blocked every public trap (the instructor runs more)
 
 ## Kiểm tra và vận hành
 
-- Host contracts: 57 passed, 297 deselected in 3.63s
-- Core tests: 19 passed, 335 deselected in 2.06s
-- Advanced tests: 30 passed, 324 deselected in 0.96s
+- Host contracts: 57 passed, 299 deselected in 3.71s
+- Core tests: 21 passed, 335 deselected in 5.78s
+- Advanced tests: 30 passed, 326 deselected in 1.00s
 - M3 detection: detection 100.00% (target >=80%) · false alarms 0.00% (target <=10%)
 
 - Gate owner đề xuất: chủ repo nhvtmanh; người duyệt release: maintainer/giảng viên.

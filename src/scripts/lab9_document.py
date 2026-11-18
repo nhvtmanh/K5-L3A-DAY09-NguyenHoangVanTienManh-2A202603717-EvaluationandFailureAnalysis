@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 import subprocess
 
@@ -70,6 +71,8 @@ Tài liệu sinh bằng `python -m scripts.lab9_document` từ report CLI, khôn
 - V2: `{v2['run_id']}`, SHA `{v2['manifest']['eval_set_sha']}`, spec 2.0.
 - Labels v1 SHA-256: `{hashlib.sha256(Path('data/eval/labels_v1.json').read_bytes()).hexdigest()}`.
 - V1: 14 item × 5 seed; v2: 28 item × 5 seed. Seeds 11,22,33,44,55. Nhãn tách riêng, nguồn lab8_public và instructor_adversarial.
+- SHA eval set chuẩn hóa CRLF thành LF để Windows/Linux cùng nhận diện dữ liệu;
+  nội dung, khoảng trắng và thứ tự item vẫn được hash. Builder ghi LF; gate vẫn chặn SHA khác nhau.
 - Baseline được sinh từ swarm nguyên bản; Lab 8 không sửa. Việc commit lên nhánh được bảo vệ và xác nhận GitHub CI còn chờ nộp PR.
 
 ## Kết quả v1
@@ -253,6 +256,9 @@ Fixed và PR swarm exit 0; baseline sanity exit 0.
     for name, content in (("eval_card.md", card), ("PRD_v1.1.md", prd), ("PR_description.md", description)):
         (docs / name).write_text(content, encoding="utf-8")
         print(f"wrote {docs / name}")
+    trace_case = docs / "trace_case.md"
+    trace_case.write_text(re.sub(r"E-seeded_regression-\d{8}-[0-9a-f]{4}", regression["run_id"],
+                                trace_case.read_text(encoding="utf-8")), encoding="utf-8")
 
 
 if __name__ == "__main__":

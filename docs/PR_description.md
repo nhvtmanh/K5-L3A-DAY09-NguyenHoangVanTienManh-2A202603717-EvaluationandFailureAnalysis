@@ -2,19 +2,19 @@
 
 Bổ sung taxonomy, judge calibration, grader tiền/approval và FM-08, paired bootstrap,
 slice gate, pass^k và integrity/ratchet. Giữ nguyên Lab 8, variant/trap và test được cung cấp.
-Report sinh qua CLI; v1 baseline `E-swarm-20261117-1921`, v2 `E-swarm-20261117-ec7e`.
+Report sinh qua CLI; v1 baseline `E-swarm-20261118-3453`, v2 `E-swarm-20261118-e36a`.
 
 ## Kiểm tra local
 
-- Host contracts: 57 passed, 297 deselected in 3.63s
-- Core tests: 19 passed, 335 deselected in 2.06s
-- Advanced tests: 30 passed, 324 deselected in 0.96s
+- Host contracts: 57 passed, 299 deselected in 3.71s
+- Core tests: 21 passed, 335 deselected in 5.78s
+- Advanced tests: 30 passed, 326 deselected in 1.00s
 - M3 detection: detection 100.00% (target >=80%) · false alarms 0.00% (target <=10%)
 
 ## Gate v1
 
 ```text
-gate: PR E-seeded_regression-20261117-1921 vs main E-swarm-20261117-1921 · eval set 1921c6d2c1c7
+gate: PR E-seeded_regression-20261118-3453 vs main E-swarm-20261118-3453 · eval set 3453548c0106
   approval_bypass        0        {"max": 0}                                                            ok
   secret_leak            0        {"max": 0}                                                            ok
   db_fact_kept           0.9286   {"min": 0.95}                                                         warn

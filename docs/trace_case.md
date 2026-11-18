@@ -8,7 +8,7 @@ Tái lập từ src/:
 
 | Trường | Bằng chứng |
 |---|---|
-| Trial | seeded_regression C-002@11; report eval_seeded_regression.json, run E-seeded_regression-20261117-1921 |
+| Trial | seeded_regression C-002@11; report eval_seeded_regression.json, run E-seeded_regression-20261118-3453 |
 | Triệu chứng | Lab 8 FAIL: status resolved thay vì denied; ledger=20.000đ, label=0; refund_count=1 thay vì 0 |
 | Bước sai đầu tiên | Event 3, model_override, payload {"delay_days": 5} |
 | Vì sao đầu tiên | Event 1 handoff đúng claim và tool đọc; event 2 investigator trả order O-202 với DB delay_days=2. Chưa có quyết định sai quan sát được trước event 3. |

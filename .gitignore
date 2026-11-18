@@ -1,7 +1,19 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python / OS (the PowerShell setup creates src/.venv inside the repo)
+.venv/
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Runtime output. Reports for grading (baseline_v1/v2, eval_fixed, eval_seeded_regression)
+# are committed with: git add -f reports/*.json
 src/reports/
-src/traces/
+traces/
 *.sqlite
 .venv/
 .env
